@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# 🌐 Web Development Internship Project – Task 1 (CodeVeda)
 
-## Project info
+This repository contains the first assignment completed during my **Web Development Internship at CodeVeda**. The objective of this task was to build a responsive and user-friendly website using core frontend technologies.
 
-**URL**: https://lovable.dev/projects/5b987b40-7680-46fa-b72e-accb818570f5
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- Fully responsive design  
+- Clean and organized UI  
+- Interactive JavaScript elements  
+- Lightweight and fast-loading website  
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5b987b40-7680-46fa-b72e-accb818570f5) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+| Technology | Purpose |
+|------------|---------|
+| HTML       | Structure |
+| CSS        | Styling & Layout |
+| JavaScript | Interactivity |
+| Git/GitHub | Version Control |
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📂 Folder Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Project/
+│── index.html
+│── style.css
+│── script.js
+└── assets/
 
-Follow these steps:
+yaml
+Copy code
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📚 What I Learned
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Structuring and styling webpages professionally  
+- Writing clean and reusable code  
+- Creating responsive layouts  
+- Using GitHub for hosting and version control  
+- Understanding real-world project workflow  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🌟 About the Internship
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is part of my **Web Development Internship at CodeVeda**, designed to enhance practical skills and real-world development experience.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 👤 Author
 
-## What technologies are used for this project?
+Pratik Erande
+📧 Email: pratikerande73@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/pratik-ramdas-erande-a59b4034a/  
+📁 GitHub: https://github.com/PratikErande13
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+⭐ If you like this project, don’t forget to give it a star!
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/5b987b40-7680-46fa-b72e-accb818570f5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Important Note : Please Insatll your own node_modules !!
