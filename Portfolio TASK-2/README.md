@@ -22,6 +22,12 @@ The goal of this project was to build a responsive, structured, and visually app
 | CSS       | Styling & layout |
 | JavaScript| Interactivity |
 
+👤 Author
+Pratik Erande 📧 Email: pratikerande73@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/pratik-ramdas-erande-a59b4034a/
+📁 GitHub: https://github.com/PratikErande13
+
+
 IMPORTANT Note : Install youw own node_modules
 
 
