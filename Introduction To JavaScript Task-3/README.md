@@ -47,3 +47,6 @@ Gained experience in adding interactivity to webpages
 Enhanced front-end development skills
 
 Learned to write clean and organized JavaScript code
+
+IMPORTANT Note : Install your own node_modules
+
