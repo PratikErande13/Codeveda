@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+/* Design System - Warm Editorial Aesthetic with Bold Accents */
+
+@layer base {
+  :root {
+    /* Rich warm palette with depth */
+    --background: 45 35% 97%;
+    --foreground: 15 20% 12%;
+
+    --card: 45 30% 96%;
+    --card-foreground: 15 20% 12%;
+
+    --popover: 45 35% 97%;
+    --popover-foreground: 15 20% 12%;
+
+    /* Bold terracotta primary */
+    --primary: 12 75% 50%;
+    --primary-foreground: 45 35% 97%;
+
+    /* Warm cream secondary */
+    --secondary: 42 40% 92%;
+    --secondary-foreground: 15 20% 15%;
+
+    --muted: 40 25% 90%;
+    --muted-foreground: 15 15% 40%;
+
+    /* Deep sage accent */
+    --accent: 165 40% 35%;
+    --accent-foreground: 45 35% 97%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 45 35% 97%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 12 75% 50%;
+
+    --radius: 1rem;
+
+    /* Enhanced design tokens */
+    --gradient-warm: linear-gradient(135deg, hsl(12 75% 50%) 0%, hsl(25 85% 55%) 50%, hsl(35 90% 60%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(12 75% 50%) 0%, hsl(350 70% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(45 35% 97%) 0%, hsl(42 30% 94%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(45 30% 98%) 0%, hsl(42 25% 94%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(15 20% 10%) 0%, hsl(20 15% 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(45 35% 97% / 0.8) 0%, hsl(45 35% 97% / 0.4) 100%);
+    
+    --shadow-soft: 0 4px 20px -5px hsl(15 20% 12% / 0.08);
+    --shadow-card: 0 10px 40px -10px hsl(15 20% 12% / 0.12);
+    --shadow-hover: 0 20px 50px -15px hsl(15 20% 12% / 0.2);
+    --shadow-glow: 0 0 60px -15px hsl(12 75% 50% / 0.4);
+    
+    --font-display: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+
+    --sidebar-background: 42 30% 96%;
+    --sidebar-foreground: 15 20% 20%;
+    --sidebar-primary: 12 75% 50%;
+    --sidebar-primary-foreground: 45 35% 97%;
+    --sidebar-accent: 42 25% 92%;
+    --sidebar-accent-foreground: 15 20% 15%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 12 75% 50%;
+  }
+
+  .dark {
+    --background: 15 20% 8%;
+    --foreground: 42 30% 94%;
+
+    --card: 15 18% 12%;
+    --card-foreground: 42 30% 94%;
+
+    --popover: 15 20% 8%;
+    --popover-foreground: 42 30% 94%;
+
+    --primary: 15 70% 55%;
+    --primary-foreground: 15 20% 8%;
+
+    --secondary: 15 15% 16%;
+    --secondary-foreground: 42 30% 94%;
+
+    --muted: 15 12% 18%;
+    --muted-foreground: 40 20% 60%;
+
+    --accent: 165 45% 45%;
+    --accent-foreground: 15 20% 8%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 42 30% 94%;
+
+    --border: 15 12% 20%;
+    --input: 15 12% 20%;
+    --ring: 15 70% 55%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(15 70% 55%) 0%, hsl(25 75% 50%) 50%, hsl(35 80% 55%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(15 70% 55%) 0%, hsl(350 65% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(15 20% 8%) 0%, hsl(15 18% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(15 18% 14%) 0%, hsl(15 15% 10%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(15 20% 6%) 0%, hsl(20 15% 4%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(15 20% 8% / 0.8) 0%, hsl(15 20% 8% / 0.4) 100%);
+    
+    --shadow-soft: 0 4px 20px -5px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 20px 50px -15px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 60px -15px hsl(15 70% 55% / 0.4);
+
+    --sidebar-background: 15 18% 10%;
+    --sidebar-foreground: 42 25% 92%;
+    --sidebar-primary: 15 70% 55%;
+    --sidebar-primary-foreground: 15 20% 8%;
+    --sidebar-accent: 15 12% 16%;
+    --sidebar-accent-foreground: 42 25% 92%;
+    --sidebar-border: 15 12% 20%;
+    --sidebar-ring: 15 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-strong {
+    background: hsl(var(--background) / 0.85);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-gradient {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    position: relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--gradient-warm);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.5); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Shimmer effect */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0) 0%,
+      hsl(var(--primary) / 0.3) 50%,
+      hsl(var(--primary) / 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Gradient border */
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: var(--gradient-warm);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  /* Noise texture overlay */
+  .noise {
+    position: relative;
+  }
+
+  .noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+}
