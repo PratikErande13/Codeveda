@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Dark theme base */
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Teal/Cyan primary */
+    --primary: 175 80% 50%;
+    --primary-foreground: 220 20% 8%;
+
+    /* Muted surfaces */
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 10% 55%;
+
+    --accent: 175 60% 45%;
+    --accent-foreground: 220 20% 8%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 175 80% 50%;
+
+    --radius: 1rem;
+
+    /* Calculator specific */
+    --calc-display: 220 20% 6%;
+    --calc-button: 220 15% 16%;
+    --calc-button-hover: 220 15% 22%;
+    --calc-operator: 175 80% 50%;
+    --calc-operator-hover: 175 80% 60%;
+    --calc-equal: 160 90% 45%;
+    --calc-equal-hover: 160 90% 55%;
+    --calc-clear: 0 70% 55%;
+    --calc-clear-hover: 0 70% 65%;
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(220 25% 6%) 0%, hsl(240 20% 10%) 50%, hsl(200 25% 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(220 15% 15% / 0.8) 0%, hsl(220 15% 10% / 0.6) 100%);
+    --gradient-button: linear-gradient(145deg, hsl(var(--calc-button)) 0%, hsl(220 15% 12%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 8px 32px hsl(220 50% 5% / 0.5);
+    --shadow-button: 0 4px 12px hsl(220 50% 5% / 0.4);
+    --shadow-glow: 0 0 40px hsl(175 80% 50% / 0.15);
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 175 80% 50%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 175 80% 50%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .calc-button {
+    @apply relative overflow-hidden transition-all duration-150 ease-out;
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-button);
+  }
+
+  .calc-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px hsl(220 50% 5% / 0.5);
+  }
+
+  .calc-button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 8px hsl(220 50% 5% / 0.4);
+  }
+
+  .calc-button-operator {
+    background: linear-gradient(145deg, hsl(var(--calc-operator)) 0%, hsl(175 80% 40%) 100%);
+    box-shadow: var(--shadow-button), 0 0 20px hsl(175 80% 50% / 0.2);
+  }
+
+  .calc-button-operator:hover {
+    background: linear-gradient(145deg, hsl(var(--calc-operator-hover)) 0%, hsl(175 80% 50%) 100%);
+    box-shadow: 0 6px 16px hsl(220 50% 5% / 0.5), 0 0 30px hsl(175 80% 50% / 0.3);
+  }
+
+  .calc-button-equal {
+    background: linear-gradient(145deg, hsl(var(--calc-equal)) 0%, hsl(160 90% 35%) 100%);
+    box-shadow: var(--shadow-button), 0 0 20px hsl(160 90% 45% / 0.2);
+  }
+
+  .calc-button-equal:hover {
+    background: linear-gradient(145deg, hsl(var(--calc-equal-hover)) 0%, hsl(160 90% 45%) 100%);
+    box-shadow: 0 6px 16px hsl(220 50% 5% / 0.5), 0 0 30px hsl(160 90% 45% / 0.3);
+  }
+
+  .calc-button-clear {
+    background: linear-gradient(145deg, hsl(var(--calc-clear)) 0%, hsl(0 70% 45%) 100%);
+    box-shadow: var(--shadow-button), 0 0 20px hsl(0 70% 55% / 0.2);
+  }
+
+  .calc-button-clear:hover {
+    background: linear-gradient(145deg, hsl(var(--calc-clear-hover)) 0%, hsl(0 70% 55%) 100%);
+    box-shadow: 0 6px 16px hsl(220 50% 5% / 0.5), 0 0 30px hsl(0 70% 55% / 0.3);
+  }
+
+  .calc-button-scientific {
+    background: linear-gradient(145deg, hsl(260 60% 50%) 0%, hsl(260 60% 40%) 100%);
+    box-shadow: var(--shadow-button), 0 0 20px hsl(260 60% 50% / 0.2);
+  }
+
+  .calc-button-scientific:hover {
+    background: linear-gradient(145deg, hsl(260 60% 60%) 0%, hsl(260 60% 50%) 100%);
+    box-shadow: 0 6px 16px hsl(220 50% 5% / 0.5), 0 0 30px hsl(260 60% 50% / 0.3);
+  }
+
+  .mesh-gradient {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: 
+      radial-gradient(ellipse at 20% 20%, hsl(175 80% 50% / 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, hsl(260 80% 50% / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, hsl(200 80% 50% / 0.04) 0%, transparent 60%),
+      var(--gradient-bg);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    text-shadow: 0 0 30px hsl(175 80% 50% / 0.3);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 2px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
