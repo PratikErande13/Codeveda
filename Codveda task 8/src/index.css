@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 30 8% 45%;
+
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 20% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 1rem;
+
+    --font-sans: 'DM Sans', sans-serif;
+    --font-serif: 'Instrument Serif', serif;
+
+    --sidebar-background: 40 25% 96%;
+    --sidebar-foreground: 30 10% 25%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 20% 92%;
+    --sidebar-accent-foreground: 30 10% 20%;
+    --sidebar-border: 35 15% 88%;
+    --sidebar-ring: 25 95% 53%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 95% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 25% 95%) 100%);
+
+    --shadow-soft: 0 4px 24px -4px hsl(30 20% 20% / 0.08);
+    --shadow-medium: 0 8px 32px -8px hsl(30 20% 20% / 0.12);
+  }
+
+  .dark {
+    --background: 30 15% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 30 12% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 30 12% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 10% 18%;
+    --secondary-foreground: 40 15% 85%;
+
+    --muted: 30 10% 20%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 25 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 22%;
+    --ring: 25 95% 55%;
+
+    --sidebar-background: 30 12% 10%;
+    --sidebar-foreground: 40 15% 90%;
+    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 10% 18%;
+    --sidebar-accent-foreground: 40 15% 90%;
+    --sidebar-border: 30 10% 18%;
+    --sidebar-ring: 25 95% 55%;
+
+    --success: 142 71% 40%;
+    --success-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+  }
+}
